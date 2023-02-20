@@ -16,12 +16,15 @@
 
 const array = [];
 let summ = 0;
-let minEl = 9;
+
 const newArray = [];
 for (let i = 0; i < 5; i++) {
     array[i] = Math.floor(Math.random() * 10);
+}
+let minEl = array[0];
+for (let i = 0; i < 5; i++) {
     summ += array[i];
-    if (array[i] < minEl) {
+    if (array[i] < minEl) { //Math.min(...array)
         minEl = array[i];
     }
     if (array[i] === 3) {
@@ -33,3 +36,7 @@ console.log(summ);
 console.log(minEl);
 console.log(newArray);
 
+// 3 - let minEl = 9; мне не очень нравится этот вариант,
+// если мы потом решим изменить максимальное значение, легко будет забыть исправить здесь значение.
+// В целом, лучше использовать Math.min(...array), мы это не проходили пока.
+// Отлично сделали.
