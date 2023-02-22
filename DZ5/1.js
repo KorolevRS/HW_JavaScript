@@ -23,4 +23,5 @@ const numbers = {
 
 // console.log(Object.values(numbers));
 console.log(Object.values(numbers).filter(num => num > 3));
+// Красота, еще и в двух вариантах :)
 

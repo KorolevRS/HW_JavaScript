@@ -24,3 +24,5 @@ const products1 = [
 
 products1.forEach(product => product.price = product.price * 0.85);
 console.log(products1);
+
+// Идеально.

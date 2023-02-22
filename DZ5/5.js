@@ -21,3 +21,5 @@ for (let i = 0; i < en.length; i++) {
   days[en[i]] = ru[i];
 }
 console.log(days);
+
+// Прекрасно все.
