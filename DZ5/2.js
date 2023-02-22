@@ -31,6 +31,11 @@ const post = {
 };
 
 console.log(post.author);
-console.log(Object.values(post['comments'])[0].rating['dislikes']);
-console.log(Object.values(post['comments'])[1].userId);
-console.log(Object.values(post['comments'])[1].text);
+// console.log(Object.values(post['comments'])[0].rating['dislikes']);
+// console.log(Object.values(post['comments'])[1].userId);
+// console.log(Object.values(post['comments'])[1].text);
+console.log(post['comments'][0].rating['dislikes']);
+console.log(post['comments'][1].userId);
+console.log(post['comments'][1].text);
+
+// Object.values не нужен в 34-36 строках, у нас и так там будет массив.
