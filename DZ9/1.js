@@ -12,9 +12,10 @@
 */
 const inputEl = document.querySelector('#from');
 const spanEl = document.querySelector('span');
-inputEl.addEventListener('input', (e) => {
+inputEl.addEventListener('input', () => {
     spanEl.textContent = inputEl.value;
 });
+// 1. Идеально. e можно и не принимать в функции, все равно не используется.
 /*
 2. При клике на кнопку с классом messageBtn необходимо элементу с классом
 message:
@@ -22,11 +23,13 @@ message:
 2) поставить данному элементу стиль visibility в значение 'visible'.
 */
 const buttonEl = document.querySelector('.messageBtn');
+const messageEl = document.querySelector('.message');
 buttonEl.addEventListener('click', (e) => {
-    e.target.classList.add('animate__animated', 'animate__fadeInLeftBig');
-    e.target.style.visibility = 'visible';
-})
-
+    messageEl.classList.add('animate__animated', 'animate__fadeInLeftBig');
+    messageEl.style.visibility = 'visible';
+});
+// 2. Нужно было другому элементу ставить классы и стиль ;)
+// ; нужна в 28 строке.
 /*
 3. Необходимо при отправке формы проверить, заполнены ли все поля в этой
 форме. Если какое-либо поле не заполнено, форма не должна отправляться, также
@@ -41,19 +44,14 @@ buttonEl.addEventListener('click', (e) => {
 const formEl = document.querySelector('form');
 const inputElems = document.querySelectorAll('.form-control, #from');
 
-formEl.querySelector('button').addEventListener('click', (e) => {
-    let count = 0;
+formEl.addEventListener('submit', (e) => {
     // console.log(inputElems);
     inputElems.forEach(item => {
         if (item.value.length === 0) {
-            count = 1;
             item.classList.add('error');
+            e.preventDefault();
         }
     });
-    if (count === 1) {
-        // console.log('форму не отправлять');
-        e.preventDefault();
-    }
 });
 
 inputElems.forEach(item => {
@@ -65,4 +63,6 @@ inputElems.forEach(item => {
         }
     });
 });
+// 3. Можно не делать флаг, вроде count, можно просто вызывать e.preventDefault(); в 49 строке. Если вызвать несколько раз - ошибки не будет.
+// Лучше в 44 строке использовать событие submit на саму форму, потому что отправить форму можно не только нажатием на кнопку.
 
