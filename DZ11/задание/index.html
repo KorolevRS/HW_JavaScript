@@ -369,47 +369,12 @@
   </div>
 
   <script src="data.js"></script>
-  <script>
-    const newProducts = JSON.parse(json).goods;
 
-    const featuredContainerEl = document.querySelector('.featuredItems');
-    const templateEl = document.querySelector('.template');
-
-    function createCard(newObject) {
-      const featuredItemEl = templateEl.content.querySelector('.featuredItem');
-      const clonefeaturedItem = featuredItemEl.cloneNode(true);
-      featuredContainerEl.appendChild(clonefeaturedItem);
-      clonefeaturedItem.querySelector('.featuredImgWrap img').src = newObject.img;
-      clonefeaturedItem.querySelector('.addToCart').dataset.id = newObject.id;
-      clonefeaturedItem.querySelector('.featuredName').textContent = newObject.name;
-      clonefeaturedItem.querySelector('.featuredText').textContent = newObject.description;
-      clonefeaturedItem.querySelector('.featuredPrice').textContent = newObject.price;
-    };
-    newProducts.forEach((object) => {
-      createCard(object);
-    });
-
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
-<!-- <div class="featuredItem">
-  <div class="featuredImgWrap">
-    <img src="images/featured/1.jpg" alt="" />
-    <div class="featuredImgDark">
-      <button class="addToCart" data-id="04a57766-c599-4366-8dc4-89ff1ccd3b14">
-        <img src="images/cart.svg" alt="" />
-        Add to Cart
-      </button>
-    </div>
-  </div>
-
-  <div class="featuredData">
-    <div class="featuredName">ELLERY X M'O CAPSULE</div>
-    <div class="featuredText">
-      Known for her sculptural takes on traditional tailoring,
-      Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
-    </div>
-    <div class="featuredPrice">3500 руб.</div>
-  </div>
-</div> -->
+<!-- Ссылка на PR неверная ;)// согласен, торопился
+Предлагаю не писать в html код js, лучше отдельный файл используйте.//исправил, создал файл script.js
+Нюанс такой есть... Советую реже дергать функции, которые вставляют (в целом, меняют) что-то в html, это не самые быстрые функции, получить один раз всю разметку, которая нужна и за один раз вставить ее всю, так работать будет быстрее (хотя здесь разницы особой быть не должно).
+Отлично все сделали, Роман, вы молодец. -->
