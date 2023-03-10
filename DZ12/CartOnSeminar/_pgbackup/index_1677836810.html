@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap 5 Shopping Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <style>
+        .product-block {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .product-image {
+            width: 100px;
+            height: 100px;
+        }
+        .cart-block {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Shopping Cart</h1>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="product-block">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://images.unsplash.com/photo-1516049084740-9a14b9c4239c?ixid=MnwyMDkyMnwwfDF8c2VhcmNofDE4fHxwbGFjZWhvbGRlcnxlbnwwfHx8fDE2Nzc4MzQ4OTE&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop" class="product-image">
+                        </div>
+                        <div class="col-md-8">
+                            <h3>Product 1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Price: $10.00</p>
+                            <button class="btn btn-primary btn-add" data-id="100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-block">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://images.unsplash.com/photo-1559311648-d46f5d8593d6?ixid=MnwyMDkyMnwwfDF8c2VhcmNofDR8fHBsYWNlaG9sZGVyfGVufDB8fHx8MTY3NzgzNDg5MQ&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop" class="product-image">
+                        </div>
+                        <div class="col-md-8">
+                            <h3>Product 2</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Price: $20.00</p>
+                            <button class="btn btn-primary btn-add btn-add" data-id="101">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-block">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://images.unsplash.com/photo-1596887245124-5150ad2491e7?ixid=MnwyMDkyMnwwfDF8c2VhcmNofDl8fHBsYWNlaG9sZGVyfGVufDB8fHx8MTY3NzgzNDg5MQ&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop" class="product-image">
+                        </div>
+                        <div class="col-md-8">
+                            <h3>Product 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Price: $30.00</p>
+                            <button class="btn btn-primary btn-add" data-id="102">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-block">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://images.unsplash.com/photo-1527697911963-20cb424e9608?ixid=MnwyMDkyMnwwfDF8c2VhcmNofDExfHxwbGFjZWhvbGRlcnxlbnwwfHx8fDE2Nzc4MzQ4OTE&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop" class="product-image">
+                        </div>
+                        <div class="col-md-8">
+                            <h3>Product 4</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Price: $40.00</p>
+                            <button class="btn btn-primary" data-id="103">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-block">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://images.unsplash.com/photo-1616628188524-65a2deb4f06f?ixid=MnwyMDkyMnwwfDF8c2VhcmNofDEyfHxwbGFjZWhvbGRlcnxlbnwwfHx8fDE2Nzc4MzQ4OTE&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop" class="product-image">
+                        </div>
+                        <div class="col-md-8">
+                            <h3>Product 5</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Price: $50.00</p>
+                            <button class="btn btn-primary btn-add" data-id="104">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cart-block">
+                    <h3>Cart</h3>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p>Product 1.  ( <span class="product-count">2</span> ) <button class="btn btn-danger btn-sm">X</button></p>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p>Product 2 ( <span class="product-count">5</span> ) <button class="btn btn-danger btn-sm">X</button></p>
+                        </div>
+                        
+                    </div>
+                    <hr>
+                    <p>Total: $60.00</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
