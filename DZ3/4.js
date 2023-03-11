@@ -18,4 +18,26 @@ console.log(sum(2, 6)); должно вывести число 8 в консол
 Демонстрировать работы функций не обязательно.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const number3 = +prompt('Введите 1-ое число');
+const number4 = +prompt('Введите 2-ое число');
+
+console.log(`Сложение ${summa(number3, number4)}`);
+console.log(`Разность ${minus(number3, number4)}`);
+console.log(`Умножение ${multiplication(number3, number4)}`);
+console.log(`Деление ${division(number3, number4)}`);
+
+function summa(num1, num2) {
+    return num1 + num2;
+}
+
+function minus(num1, num2) {
+    return (num1 >= num2 ? num1 - num2 : num2 - num1);
+}
+
+function multiplication(num1, num2) {
+    return num1 * num2;
+}
+
+function division(num1, num2) {
+    return (num1 / num2).toFixed(2);//два знака после запятой
+}
