@@ -7,4 +7,9 @@
 который получаем от функции, в консоль.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const number = +prompt("Введите число");
+console.log(cubing(number));
+
+function cubing(num) {
+    return num ** 3
+};
